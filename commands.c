@@ -288,14 +288,14 @@ void help()
 	printf("\033[1;32mecho\033[m:      echo ...                        Print strings after echo\n");
 	printf("           echo ... >(>>) [FILE]           Redirection is supported\n");
 	printf("\033[1;32mls\033[m:        ls [DIR]                        List the file names in the target directory\n");
-	printf("\033[1;32mcd\033[m:        cd [DIR]						   Go to a specified directory\n");
+	printf("\033[1;32mcd\033[m:        cd [DIR]		           Go to a specified directory\n");
 	printf("\033[1;32mmkdir\033[m:     mkdir [DIR]                     Create a file directory\n");
-	printf("\033[1;32mrm\033[m:        rm [FILE]\\[DIR]                Delete a file\\directory\n");
+	printf("\033[1;32mrm\033[m:        rm [FILE]\\[DIR]                 Delete a file\\directory\n");
 	printf("\033[1;32mcat\033[m:       cat [FILE]                      Print text Output\n"); 
 	printf("           cat [FILE] >(>>) [FILE]         Redirection is supported\n");
 	printf("\033[1;32mwc\033[m:        wc [FILE]                       Statistics the number of bytes, words and rows in the specified file, and display\n");
 	printf("\033[1;32mclear\033[m:     clear                           Clear the screen\n");
-	printf("\033[1;32mhelp\033[m:      help             			   Show the manual of help/get help info of a sepcified command\n");
+	printf("\033[1;32mhelp\033[m:      help                            Show the manual of help/get help info of a sepcified command\n");
 	printf("\033[1;32mtail\033[m:      tail [OPTION]... [FILE]...      Print  the  last  10  lines of FILE\n");
 	printf("           -f                              Output appended data as the file grows\n");
 	printf("\033[1;32mquit\033[m:      quit                            Quit the shell\n");
