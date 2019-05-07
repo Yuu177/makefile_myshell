@@ -246,9 +246,9 @@ void wc()
 	char buf[1024];
 	FILE* fp;
 	int len;
-	int length = 0;//总长度
+	int length = 0;//字节数
 	int RowNumber = 0;//行数
-	int sizeLen = 0;//字节长度
+    int count = 0;//单词数
 	if((fp = fopen(cmdArry[1], "r")) == NULL)
 	{
 		printf("open false!\n");
@@ -257,13 +257,17 @@ void wc()
 	while(fgets(buf, 1024, fp) != NULL)
 	{
 		len = strlen(buf);
-		buf[len - 1] = '\0';//去掉换行符
-		--len;
 		length += len;
 		++RowNumber;
-		sizeLen += sizeof(buf);
-	}
-	printf("%d\t%d\t%d %s",sizeLen, length, RowNumber, cmdArry[1]);
+		buf[len - 1] = '\0';//去掉换行符
+        char* tmp = strtok(buf, " ");
+        while(tmp != NULL)
+        {
+            ++count;
+            tmp = strtok(NULL, " ");
+    	}
+    }
+	printf("%d\t%d\t%d %s", RowNumber, count, length, cmdArry[1]);
 	printf("\n");
 	fclose(fp);
 	return;
